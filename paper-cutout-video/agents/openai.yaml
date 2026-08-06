@@ -1,0 +1,4 @@
+interface:
+  display_name: "剪纸拼贴视频"
+  short_description: "制作通用纸张剪纸拼贴风格的可编辑叙事视频与动画"
+  default_prompt: "使用 $paper-cutout-video 根据我的主题、口播和素材制作纸张剪纸拼贴风格的视频。"
