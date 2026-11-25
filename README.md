@@ -6,9 +6,10 @@
 
 - 从生产 brief、口播稿和镜头表开始组织内容；
 - 区分真实素材、官方素材、解释动画和占位素材；
-- 搭建分层 Remotion 工程；
-- 处理字幕、声音、样片、正式渲染和质量验收；
-- 迁移参考视频的视觉语言，同时替换主题与素材。
+- 支持 **2D/2.5D 剪纸拼贴** 与 **3D 纸雕立体舞台（`@remotion/three`）** 双轨及 `hybrid` 混合渲染；
+- 支持 **立体贺卡插片（`pop-up-cutout`）**、**3D 折纸几何体（`lowpoly-papercraft`）**，以及画卷、手风琴、对开立体书、折封揭晓等多种纸艺展开形态；
+- 搭建分层 Remotion 工程，处理字幕、声音、样片、正式渲染和质量验收；
+- 拆解并迁移外部非纸雕参考视频（如地理、物理、科普、产品实测）的叙事与镜头机制。
 
 ## 安装
 
@@ -38,6 +39,11 @@ paper-cutout-video/
 ├── agents/openai.yaml
 ├── scripts/scaffold_project.py
 └── references/
+    ├── production-blueprint.md
+    ├── style-spec.md
+    ├── remotion-patterns.md
+    ├── quality-gates.md
+    └── reference-deconstruction.md
 ```
 
 ## 许可

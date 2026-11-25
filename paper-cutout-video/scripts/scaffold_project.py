@@ -53,7 +53,7 @@ def main() -> int:
     edit = root / "edit"
     files: dict[Path, str] = {
         edit / "project.md": f"""# {args.title}\n\n## 状态\n\n- 阶段：立项\n- 成片：未生成\n- 工程：`edit/composition/`\n\n## 关键决定\n\n- 画幅：{args.width} × {args.height}\n- 帧率：{args.fps} fps\n- 目标时长：{args.duration:.2f} 秒\n\n## 会话记录\n\n- 初始化项目骨架。\n""",
-        edit / "brief.md": f"""# 生产 Brief\n\n- 项目：{args.title}\n- 主题：\n- 一句话结论：\n- 目标观众：\n- 观看价值：\n- 目标平台：\n- 时长：{args.duration:.2f} 秒\n- 画幅：{args.width} × {args.height}\n- 帧率：{args.fps} fps\n- 声音：\n- 事实与来源：\n- 场景语法：map-route / timeline-process / relationship-board / comparison / product-story\n- 交付层级：文档 / 工程 / 样片 / 成片\n""",
+        edit / "brief.md": f"""# 生产 Brief\n\n- 项目：{args.title}\n- 主题：\n- 一句话结论：\n- 目标观众：\n- 观看价值：\n- 目标平台：\n- 时长：{args.duration:.2f} 秒\n- 画幅：{args.width} × {args.height}\n- 帧率：{args.fps} fps\n- 声音：\n- 事实与来源：\n- 场景语法：map-route / timeline-process / relationship-board / comparison / product-story\n- 渲染轨道：2d-cutout / 2.5d-fold / 3d-diorama / hybrid\n- 展开形态：scroll-unfold / accordion-fold / book-spread / evidence-fold / globe-orbit / flat-stage\n- 交付层级：文档 / 工程 / 样片 / 成片\n""",
         edit / "script.md": """# 口播与画面\n\n| 开始 | 结束 | 口播 | 主要视觉 | 来源状态 | 动画 | 字幕 | 音效 |\n|---:|---:|---|---|---|---|---|---|\n""",
         edit / "shotlist.md": """# 镜头表\n\n| 镜头 | 时间 | 目的 | 背景/证据 | 纸张解释层 | 线条/路径 | 主体 | 镜头运动 | 验收点 |\n|---|---|---|---|---|---|---|---|---|\n""",
         edit / "assets-manifest.md": """# 素材清单\n\n| ID | 类型 | 来源状态 | 原始文件 | 派生文件 | 许可/来源 | 用途 | 待办 |\n|---|---|---|---|---|---|---|---|\n""",
@@ -76,6 +76,8 @@ def main() -> int:
                 "durationSeconds": args.duration,
             },
             "camera": {"startScale": 1.0, "endScale": 1.06},
+            "renderMode": "hybrid",
+            "foldStyle": "scroll-unfold",
             "sceneGrammar": None,
             "paperLayers": [],
             "lines": [],
